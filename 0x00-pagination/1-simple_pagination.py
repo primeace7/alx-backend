@@ -34,6 +34,9 @@ class Server:
         return self.__dataset
 
     def get_page(self, page: int = 1, page_size: int = 10) -> List[List]:
+        '''Return paginated view of data based on specified page
+        page size
+        '''
         assert isinstance(page, int) and page > 0
         assert isinstance(page_size, int) and page_size > 0
 
@@ -47,5 +50,5 @@ class Server:
         if stop > max_len:
             stop = max_len
 
-        result = data[start: stop + 1]
+        result = data[start: stop]
         return result
