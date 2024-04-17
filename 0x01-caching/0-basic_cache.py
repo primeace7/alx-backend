@@ -39,6 +39,9 @@ class BasicCache(BaseCaching):
     '''Basic cache without any optimizations
     '''
 
+    def __init__(self):
+        super().__init__()
+
     def put(self, key, item):
         '''place an item in the cache
         '''
